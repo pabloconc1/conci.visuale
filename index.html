@@ -842,7 +842,7 @@ function sendWhatsapp(){
   const p = getSelectedPack();
   const e = getExtra();
   const total = getTotal();
-  let msg = "Hola Pablo! Quiero cotizar un servicio con Conci Visuale.\n\n";
+  let msg = "Hola Pablo! Quiero contratar el siguiente servicio.\n\n";
   msg += "Nombre: " + state.nombre.trim() + "\n";
   msg += "Tipo de evento: " + cat.label + "\n";
   msg += "Fecha: " + fechaLegible() + "\n\n";
@@ -859,7 +859,7 @@ function sendWhatsapp(){
     msg += "Reserva (30%): " + money(reserva) + "\n";
     msg += "Saldo en " + cuotas + " cuotas de " + money(cuota) + "\n";
   }
-  msg += "\nQuedo atento para coordinar!";
+  msg += "\nQuedo atento/a para coordinar una reunión!";
   const url = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(msg);
   window.open(url, "_blank");
 }
